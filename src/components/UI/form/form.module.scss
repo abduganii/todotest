@@ -1,0 +1,112 @@
+.Form {
+    width: calc(40% - 180px);
+    border: 1px solid var(--body_color);
+    border-radius: 5px;
+    padding: 10px;
+    position: fixed;
+    border-top: none;
+    padding-top: 20px;
+
+    &__title {
+        font-size: 18px;
+        font-weight: 500;
+        position: absolute;
+        top: -12px;
+        left: 10px;
+        z-index: 10;
+        color: var(--body_color);
+    }
+
+    &__line {
+        position: absolute;
+        height: 1px;
+        width: 80%;
+        background-color: var(--body_color);
+        top: 0;
+        left: 19.7%;
+        border-radius: 50px;
+    }
+
+    &__input {
+        width: 100%;
+        background-color: transparent;
+        border: 1px solid var(--body_color);
+        margin-bottom: 20px;
+        padding: 14px;
+        color: var(--body_color);
+        border-radius: 5px;
+        outline: none;
+
+        &::placeholder {
+            color: var(--body_color);
+        }
+    }
+
+    &__tema {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 15px;
+        cursor: pointer;
+        color: var(--body_color);
+
+        &__ckeck {
+            width: 20px;
+            height: 20px;
+            border: 1px solid var(--body_color);
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    }
+
+    &__checked {
+        position: relative;
+
+        &:after {
+            content: "";
+            position: absolute;
+            // display: none;
+            left: calc(100% - 11px);
+            top: calc(100% - 15px);
+            width: 5px;
+            height: 10px;
+            border: solid var(--body_color);
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 20px;
+        text-align: center;
+        border: 1px solid var(--body_color);
+
+        &:hover {
+            background-color: transparent;
+            color: var(--body_color);
+        }
+
+        &:active {
+            background-color: var(--body_color);
+            color: var(--body_background);
+        }
+    }
+
+    &__Label {
+        p {
+            margin-top: -22px;
+            margin-left: 4px;
+            color: red;
+        }
+    }
+
+    &__inputEr {
+        border: 1px solid red;
+    }
+}

@@ -1,0 +1,56 @@
+.List {
+    width: calc(60% - 180px);
+    border: 1px solid var(--body_color);
+    border-radius: 5px;
+    padding: 10px;
+    margin-left: calc(40% - 90px);
+    min-height: 485px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        color: var(--body_color);
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: 0.3s all ease;
+
+        &:first-child {
+            background-color: var(--body_color);
+            color: var(--body_background);
+
+            &:hover {
+                transform: translate(0);
+            }
+        }
+
+        &:hover {
+            transform: translate(5px, -5px);
+
+        }
+
+        p {
+            width: 100%;
+
+            &:first-child {
+                max-width: 200px;
+            }
+
+            &:nth-child(2) {
+                max-width: 100px;
+            }
+
+            &:last-child {
+                margin-left: auto;
+                max-width: 100px;
+                cursor: pointer;
+            }
+        }
+
+    }
+
+    &__listAcitive {
+        background-color: var(--body_color);
+        color: var(--body_background);
+    }
+
+}

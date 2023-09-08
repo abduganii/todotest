@@ -1,0 +1,64 @@
+@import url("../public/fonts/fonts.css");
+
+:root {
+  --body_background:#2e2e2e;
+  --body_color:white;
+}
+
+[data-theme="dark"] {
+  --body_background:#2e2e2e;
+  --body_color:white;
+}
+
+[data-theme="light"] {
+  --body_background:white;
+  --body_color:black;
+}
+
+*,*::before,*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0 ;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  font-family: 'Inter' !important;
+  background-color: var(--body_background);
+  color: white;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+button{
+  cursor: pointer;
+}
+
+.ant-input-number-input {
+  color: var(--body_color) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.ant-input-number-input::placeholder{
+  color: var(--body_color)  !important;
+ 
+}
+
+.ant-select{
+  width: 100% !important;
+  margin-bottom: 20px !important;
+  
+}
+.ant-select-selector{
+  background-color: transparent !important;
+
+}
+.ant-select-selection-item{
+  color: var(--body_color)  !important;
+}
