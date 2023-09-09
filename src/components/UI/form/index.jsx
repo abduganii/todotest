@@ -27,7 +27,7 @@ export default function Form() {
   const AddData = (data) => {
     const Result = { id: uuidv4(), isemloyed,age, Subscribed, ...data }
     const newTodolist = todolist?.data
-    newTodolist.unshift(Result)
+    newTodolist.push(Result)
     setTodolist({change: !tF, data: newTodolist})
     setIsemloyed(false)
     setSubscribed("Subscribed")
