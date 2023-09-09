@@ -8,25 +8,25 @@ import GlobalContext from '../../hooks/useContext';
 
 export default function Form() {
   const setDark = () => {
-  document.querySelector('body').setAttribute('data-theme','dark')
+    document.querySelector('body').setAttribute('data-theme', 'dark')
   }
   const setLight = () => {
-    document.querySelector('body').setAttribute('data-theme','light')
+    document.querySelector('body').setAttribute('data-theme', 'light')
   }
   
  
-  const { register, handleSubmit ,getValues,setValue,formState: { errors }, reset } = useForm()
+  const { register, handleSubmit, getValues, setValue, formState: { errors }, reset } = useForm()
   const [isemloyed, setIsemloyed] = useState(false)
   const [tF, setFt] = useState(false)
   const [age, setage] = useState(0)
   const [Subscribed, setSubscribed] = useState('Subscribed')
 
-  const { todolist, setTodolist} = useContext(GlobalContext)
+  const { todolist, setTodolist } = useContext(GlobalContext)
   const { deleteId } = useContext(GlobalContext)
   
   const AddData = (data) => {
-    const Result = { id: uuidv4(), isemloyed,age, Subscribed, ...data }
-    const newTodolist = todolist?.data
+    const Result = { id: uuidv4(), isemloyed, age, Subscribed, ...data }
+    const newTodolist = todolist?.data || []
     newTodolist.push(Result)
     setTodolist({change: !tF, data: newTodolist})
     setIsemloyed(false)
