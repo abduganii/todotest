@@ -1,7 +1,7 @@
 
 import GlobalContext from "./components/hooks/useContext";
 import { useState } from "react";
-import TodoList from "./components/page/todo";
+import TodoList from "./components/page/todo/index";
 
 
 function App() {
